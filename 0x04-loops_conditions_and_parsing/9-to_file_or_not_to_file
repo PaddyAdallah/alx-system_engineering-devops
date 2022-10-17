@@ -1,19 +1,21 @@
 #!/usr/bin/env bash
-# Bash script that gives you information about the holbertonschool file
-file1="holbertonschool"
-if [ -e "$file1" ]
+#Creating a script that uses nested if statements
+file="school"
+if [ -e $file ]
 then
-    echo "$file1 file exists"
-    if [ -s "$file1" ]
+    echo "$file file exists"
+
+    if [ -s $file ]
     then
-        echo "$file1 file is not empty"
+	echo "$file file is not empty"
     else
-        echo "$file1 file is empty"
+	echo "$file file is empty"
     fi
-    if [ -f "$file1" ]
+
+    if [ -f $file ]
     then
-        echo "$file1 is a regular file"
+	echo "$file is a regular file"
     fi
 else
-    echo "$file1 file does not exist"
+    echo "$file file does not exist"
 fi
